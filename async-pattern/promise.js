@@ -12,16 +12,9 @@ const getText = (path)=>{
     });
 }
 
-const start = async () => {
-   const first = await getText('./content/first.txt');
-   console.log(first);
-}
-start();
-
-// getText('./content/first.txt')
-// .then(result=>console.log(result))
-// .catch(err=>console.log(err));
-
+getText('./content/first.txt')
+.then(result=>console.log(result))
+.catch(err=>console.log(err));
 
 //The could become a blocking code, the best bet is to turn it into a promise
 // readFile('./content/first.txt', 'utf8', (err, content)=>{
